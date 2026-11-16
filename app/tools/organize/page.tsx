@@ -154,10 +154,10 @@ export default function OrganizePage() {
       const blob = new Blob([new Uint8Array(mergedPdfBytes)], { type: "application/pdf" });
       setResultBlob(blob);
       saveProcessedPDF({
-        file: files[0].file,
-        name: `organized-${files[0]?.name}`,
-        size: mergedPdfBytes.length,
-        pageCount: mergedPdf.getPageCount(),
+        file: file.file,
+        name: `organized-${file.name}`,
+        size: mergedPdfBytes.byteLength,
+        pageCount: file.pageCount,
         blob,
         tool: "Organize PDF",
       });

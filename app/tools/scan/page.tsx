@@ -101,7 +101,7 @@ export default function ScanPage() {
       const blob = new Blob([new Uint8Array(pdfBytes)], { type: "application/pdf" });
       setResultBlob(blob);
       saveProcessedPDF({
-        file: new File([pdfBytes], "scanned-document.pdf", { type: "application/pdf" }),
+        file: new File([new Uint8Array(pdfBytes)], "scanned-document.pdf", { type: "application/pdf" }),
         name: `scanned-document.pdf`,
         size: pdfBytes.byteLength,
         pageCount: pdfDoc.getPageCount(),

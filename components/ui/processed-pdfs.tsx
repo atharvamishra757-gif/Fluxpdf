@@ -101,7 +101,8 @@ export function ProcessedPDFsPanel() {
   }, []);
 
   const handleDownload = (pdf: ProcessedPDF) => {
-    const url = URL.createObjectURL(pdf.blob);
+    const blob = new Blob([pdf.blobData], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
     a.download = pdf.name;
