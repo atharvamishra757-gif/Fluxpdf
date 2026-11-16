@@ -1,13 +1,13 @@
 # FluxPDF - Premium PDF Productivity Platform
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel&color=000)](https://your-vercel-app.vercel.app)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel&color=000)](https://fluxpdf-delta.vercel.app)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16.4.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-0.0.0-black?style=flat-square&logo=shadcnui)](https://ui.shadcn.com/)
 
 ## 🚀 Live Demo
 
-**Live Site:** [https://your-vercel-app.vercel.app](https://your-vercel-app.vercel.app)
+**Live Site:** [https://fluxpdf-delta.vercel.app](https://fluxpdf-delta.vercel.app)
 
 ## 📖 About FluxPDF
 
