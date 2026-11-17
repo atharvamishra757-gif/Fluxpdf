@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Logo } from "@/components/navigation/logo";
-import { ChevronRight } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 const footerLinks = [
   { name: "Features", href: "#features" },
@@ -13,10 +13,10 @@ const footerLinks = [
 ];
 
 const companyLinks = [
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
-  { name: "Privacy", href: "#privacy" },
-  { name: "Terms", href: "#terms" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+  { name: "Privacy", href: "/privacy" },
+  { name: "Terms", href: "/terms" },
 ];
 
 export function Footer() {
@@ -30,13 +30,13 @@ export function Footer() {
               The premium PDF productivity platform for professionals and teams.
             </p>
             <div className="mt-6 flex gap-4">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-brand transition-colors">
+              <Link href={siteConfig.links.twitter} className="text-sm text-muted-foreground hover:text-brand transition-colors">
                 Twitter
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-brand transition-colors">
+              <Link href={siteConfig.links.github} className="text-sm text-muted-foreground hover:text-brand transition-colors">
                 GitHub
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-brand transition-colors">
+              <Link href={siteConfig.links.linkedin} className="text-sm text-muted-foreground hover:text-brand transition-colors">
                 LinkedIn
               </Link>
             </div>
@@ -73,10 +73,10 @@ export function Footer() {
             <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
               Legal
             </h3>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-brand transition-colors">
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-brand transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-brand transition-colors">
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-brand transition-colors">
               Terms of Service
             </Link>
           </div>
@@ -86,11 +86,17 @@ export function Footer() {
             © 2026 FluxPDF. All rights reserved.
           </p>
           <div className="flex gap-3 text-xs text-muted-foreground">
-            <Link href="#" className="hover:text-brand transition-colors">Twitter</Link>
+            <Link href={siteConfig.links.twitter} className="hover:text-brand transition-colors">
+              Twitter
+            </Link>
             <span className="mx-1">/</span>
-            <Link href="#" className="hover:text-brand transition-colors">GitHub</Link>
+            <Link href={siteConfig.links.github} className="hover:text-brand transition-colors">
+              GitHub
+            </Link>
             <span className="mx-1">/</span>
-            <Link href="#" className="hover:text-brand transition-colors">LinkedIn</Link>
+            <Link href={siteConfig.links.linkedin} className="hover:text-brand transition-colors">
+              LinkedIn
+            </Link>
           </div>
         </div>
       </div>

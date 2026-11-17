@@ -58,17 +58,12 @@ export function Hero() {
             <SparklesIcon className="h-3 w-3" />
             FluxPDF — Everything you need to work with PDFs
           </div>
-          <h1 className="mb-6 text-4xl font-bold tracking-[-0.02em] sm:text-6xl leading-[1.1]">
-            Work with PDFs
-            <span className="relative z-0">
-              <span className="relative z-10 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
-                beautifully
-              </span>
-            </span>
-          </h1>
-          <p className="mb-10 text-lg text-muted-foreground sm:text-xl max-w-xl mx-auto leading-relaxed">
-            Convert, edit, organize, protect, and understand your documents — all from one premium workspace.
-          </p>
+<h1 className="mb-6 text-4xl font-bold tracking-[-0.02em] sm:text-6xl leading-[1.1]">
+  Free Online PDF Tools
+</h1>
+<p className="mb-10 text-lg text-muted-foreground sm:text-xl max-w-xl mx-auto leading-relaxed">
+  Merge, split, compress, convert, rotate and edit PDF files. Fast, secure and privacy-free PDF processing.
+</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Button size="lg" className="w-full sm:w-auto gap-2 btn-premium bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-500/30" asChild>
               <Link href="/fix-document">

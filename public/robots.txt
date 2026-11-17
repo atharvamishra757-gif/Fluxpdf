@@ -1,0 +1,30 @@
+# Robots.txt for FluxPDF
+# https://fluxpdf-delta.vercel.app/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow private application pages
+Disallow: /dashboard/
+Disallow: /tools/processed
+Disallow: /editor
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_next/static/
+
+# Allow all public tool pages
+Allow: /tools/
+Allow: /tools/merge
+Allow: /tools/split
+Allow: /tools/compress
+Allow: /tools/crop
+Allow: /tools/pdf-to-jpg
+Allow: /tools/jpg-to-pdf
+Allow: /tools/protect
+Allow: /tools/unlock
+Allow: /tools/redact
+Allow: /tools/edit
+<!-- Allow annotate, fill-forms, watermark, page-numbers, scan, sign -->
+
+# Sitemap location
+Sitemap: https://fluxpdf-delta.vercel.app/sitemap.xml

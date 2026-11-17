@@ -1,25 +1,33 @@
-"use client";
+import { Metadata } from "next";
+import PageClient from "./page.client";
+import { siteConfig } from "@/lib/site-config";
 
-import * as React from "react";
-import { ProcessedPDFsPanel } from "@/components/ui/processed-pdfs";
-import { ChevronLeft } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Processed PDFs - FluxPDF",
+  description: "View and download your processed PDFs. Your processed documents are stored locally in your browser.",
+  alternates: {
+    canonical: `${siteConfig.url}/tools/processed`,
+  },
+  openGraph: {
+    title: "Processed PDFs - FluxPDF",
+    description: "View and download your processed PDFs.",
+    url: `${siteConfig.url}/tools/processed`,
+    type: "website",
+    images: [{ url: `${siteConfig.url}/opengraph-image.png`, width: 1200, height: 630, alt: "Processed PDFs | FluxPDF" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Processed PDFs - FluxPDF",
+    description: "View and download your processed PDFs.",
+    images: [`${siteConfig.url}/opengraph-image.png`],
+  },
+};
 
 export default function ProcessedPDFsPage() {
   return (
-    <div className="min-h-screen bg-background py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl">
-        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <a href="/tools" className="text-sm font-medium text-muted-foreground hover:text-indigo-600 transition-colors">
-              <ChevronLeft className="h-4 w-4 mr-1" />
-              Back to Tools
-            </a>
-          </div>
-          <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground border-r border-border/50 pr-4" />
-        </div>
-        <h1 className="text-3xl font-bold mb-8">Processed PDFs</h1>
-        <ProcessedPDFsPanel />
-      </div>
-    </div>
+    <>
+      <meta name="robots" content="noindex" />
+      <PageClient />
+    </>
   );
 }

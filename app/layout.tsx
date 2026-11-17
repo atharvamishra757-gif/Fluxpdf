@@ -5,6 +5,7 @@ import { Providers } from "@/components/providers";
 import { Navigation } from "@/components/navigation/navigation";
 import { Logo } from "@/components/navigation/logo";
 import { Toaster } from "@/components/ui/toaster";
+import { siteConfig } from "@/lib/site-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,26 +18,74 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FluxPDF - Everything you need to work with PDFs",
-  description: "Convert, edit, organize, protect and understand your documents — all from one powerful workspace. 30+ free PDF tools.",
-  keywords: ["PDF", "converter", "editor", "merge", "split", "compress", "sign", "OCR", "AI"],
-  authors: [{ name: "FluxPDF" }],
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    template: "%s | FluxPDF",
+    default: "FluxPDF - Everything you need to work with PDFs",
+  },
+  description: siteConfig.description,
+  keywords: [
+    "PDF",
+    "PDF converter",
+    "PDF editor",
+    "merge PDF",
+    "split PDF",
+    "compress PDF",
+    "PDF sign",
+    "PDF unlock",
+    "PDF watermark",
+    "PDF page numbers",
+    "PDF to JPG",
+    "JPG to PDF",
+    "online PDF tools",
+    "free PDF tools",
+  ],
+  authors: [{ name: "FluxPDF", url: siteConfig.url }],
   creator: "FluxPDF",
   publisher: "FluxPDF",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://fluxpdf.com",
+    url: siteConfig.url,
     title: "FluxPDF - Everything you need to work with PDFs",
-    description: "Convert, edit, organize, protect and understand your documents — all from one powerful workspace.",
+    description: siteConfig.description,
     siteName: "FluxPDF",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "FluxPDF - Everything you need to work with PDFs",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "FluxPDF - Everything you need to work with PDFs",
-    description: "Convert, edit, organize, protect and understand your documents — all from one powerful workspace.",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {
@@ -44,6 +93,9 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#faf9f7" },
     { media: "(prefers-color-scheme: dark)", color: "#0b0b0e" },
   ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
